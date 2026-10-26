@@ -1,0 +1,20 @@
+limit: {cores: 4, ram_mb: 4096}
+paths:
+  models: models
+  data: data
+  cache: cache
+ollama:
+  url: http://127.0.0.1:11435
+  full_model: qwen2.5:1.5b-instruct
+  low_model: qwen2.5:0.5b-instruct
+  temperature: 0.4
+  repeat_penalty: 1.1
+audio: {sample_rate: 16000, frame_ms: 32}
+vad: {threshold: 0.5, min_rms: 120, hangover_ms: 350, hangover_min: 200, hangover_max: 700, min_speech_ms: 160}
+wake: {model: hey_jarvis_v0.1, threshold: 0.5}
+asr: {full: small, low: tiny, baseline: base.en, multilingual: small, final: none}
+tts: {length_scale: 0.9, voice_full: en_US-lessac-medium, voice_low: en_US-lessac-low, voice_hi: hi_IN, voice_ta: ta_IN-ValluvarNeural-medium}
+router: {tau_hit: 0.75, margin: 0.03, tau_indic: 0.65}   # chosen on the dev paraphrases by bench/cache_eval.py (spec default was 0.80 / 0.05)
+dash: {host: 127.0.0.1, port: 8765}
+energy: {assumed_w_per_core: 6.0}
+filler: false

@@ -1,0 +1,23 @@
+# Held-out requests (20). Written in a separate step WITHOUT opening pv/router/intents.yaml.
+# Honest caveat: authored by the same assistant that wrote the cache, not by an independent person.
+# Teammates are asked (docs/LIVE_TEST.md) to append their own lines to bench/heldout_team.yaml.
+- {id: u01, kind: cache, text: "hello hello anybody home", intent: can_you_hear}
+- {id: u02, kind: cache, text: "you are really good at this", intent: compliment}
+- {id: u03, kind: cache, text: "I am off to bed now", intent: good_night}
+- {id: u04, kind: cache, text: "what's your favourite thing to eat", intent: favorite_food}
+- {id: u05, kind: cache, text: "tell me about yourself", intent: whats_your_name}
+- {id: u06, kind: cache, text: "I have a stressful exam tomorrow", intent: stress}
+- {id: u07, kind: cache, text: "can you work without wifi", intent: offline}
+- {id: u08, kind: cache, text: "give me something to laugh about", intent: tell_joke}
+- {id: u09, kind: cache, text: "I just got a new job", intent: congrats}
+- {id: u10, kind: cache, text: "what is the weather going to be tomorrow", intent: weather}
+- {id: u11, kind: skill, text: "what's nine times eight", expect: "72"}
+- {id: u12, kind: skill, text: "set a timer for thirty seconds", expect: "timer"}
+- {id: u13, kind: skill, text: "convert 2 liters to gallons", expect: "0\\.5"}
+- {id: u14, kind: skill, text: "toss a coin for me", expect: "heads|tails"}
+- {id: u15, kind: skill, text: "what is the time now", expect: "\\d{1,2}:\\d{2}"}
+- {id: u16, kind: open, text: "what is the capital of Italy", any: [rome]}
+- {id: u17, kind: open, text: "how many legs does a spider have", any: ["eight", "8"]}
+- {id: u18, kind: open, text: "who invented the light bulb", any: [edison]}
+- {id: u19, kind: open, text: "what is the freezing point of water in Fahrenheit", any: ["32", "thirty"]}
+- {id: u20, kind: open, text: "which gas do humans breathe in to survive", any: [oxygen]}

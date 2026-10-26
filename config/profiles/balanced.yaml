@@ -1,0 +1,10 @@
+# Faster than `quality`, more accurate than the 4 GB default: a 3B model on top. Needs about 5 GB.
+limit: {cores: 4, ram_mb: 5120}
+ollama:
+  full_model: qwen2.5:3b-instruct
+  tier_models: [qwen2.5:3b-instruct, qwen2.5:1.5b-instruct, qwen2.5:0.5b-instruct, qwen2.5:0.5b-instruct]
+governor:
+  target_ms: 4000                                   # latency this model is expected to need
+  footprint_mb: [3700, 2800, 2200, 2200, 700]
+asr: {final: base.en}      # accuracy of the final transcript vs ~1 s extra per turn
+kb: {dir: kb_en}               # English Wikipedia, October 2026 export (scripts/build_kb_full.py); falls back to models/kb

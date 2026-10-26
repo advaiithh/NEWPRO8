@@ -1,0 +1,58 @@
+{
+ "ok": true,
+ "summary": "GPU-free: forbidden packages installed = none; ONNX providers = ['CPUExecutionProvider']; Ollama `size_vram` = [0] (model qwen2.5:1.5b-instruct). Offline: external network attempts during the run = 0; a deliberate connect to 8.8.8.8 was blocked and counted = True (counter now 1). Limit: a child inside the 400 MB Job Object allocated 100 MB = True and was refused 900 MB (MemoryError) = True; affinity [0, 2].",
+ "gpu": {
+  "env": {
+   "CUDA_VISIBLE_DEVICES": "-1",
+   "HIP_VISIBLE_DEVICES": "-1"
+  },
+  "ort_available_providers": [
+   "AzureExecutionProvider",
+   "CPUExecutionProvider"
+  ],
+  "ort_sessions": {
+   "silero_vad.onnx": [
+    "CPUExecutionProvider"
+   ],
+   "en_US-lessac-low.onnx": [
+    "CPUExecutionProvider"
+   ]
+  },
+  "torch_imported": false,
+  "ctranslate2_device": "cpu (explicit)",
+  "ollama": [
+   {
+    "model": "qwen2.5:1.5b-instruct",
+    "size": 1053609163,
+    "size_vram": 0
+   }
+  ],
+  "ollama_vram_zero": true,
+  "pass": true
+ },
+ "banned_packages": [],
+ "network_attempts_during_run": 0,
+ "external_probe_blocked": true,
+ "limit": {
+  "cap_mb": 400,
+  "banner": "DEVICE LIMIT: 2 cores (LLM cpus [0, 2], audio cpus [0, 2]), 400 MB RAM (Job Object cap 400 MB)",
+  "results": {
+   "100": {
+    "allocated": true,
+    "memory_error": false,
+    "affinity": [
+     0,
+     2
+    ]
+   },
+   "900": {
+    "allocated": false,
+    "memory_error": true,
+    "affinity": [
+     0,
+     2
+    ]
+   }
+  }
+ }
+}

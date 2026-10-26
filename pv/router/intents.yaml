@@ -1,0 +1,354 @@
+# Semantic cache intents. Each: id, lang, q (paraphrases), a (1-3 spoken answers, pre-rendered to audio at setup).
+# Answers are generic on purpose: no personal data, no time-sensitive facts.
+- id: greeting
+  lang: en
+  q: [hello, hi, hey there, hi there, hello there, hey, good to see you, greetings, howdy, hiya]
+  a: ["Hello! How can I help you?", "Hi there! What can I do for you?"]
+- id: good_morning
+  lang: en
+  q: [good morning, morning, top of the morning to you, good morning to you, a very good morning]
+  a: ["Good morning! I hope your day is off to a great start.", "Good morning! What can I do for you?"]
+- id: good_afternoon
+  lang: en
+  q: [good afternoon, afternoon, good afternoon to you, a good afternoon to you]
+  a: ["Good afternoon! How can I help?"]
+- id: good_evening
+  lang: en
+  q: [good evening, evening, good evening to you, a pleasant evening to you]
+  a: ["Good evening! How can I help?"]
+- id: good_night
+  lang: en
+  q: [good night, nighty night, sleep well, i am going to bed, time for bed, i am off to sleep, night night]
+  a: ["Good night! Sleep well.", "Sweet dreams. Good night!"]
+- id: goodbye
+  lang: en
+  q: [goodbye, bye, bye bye, see you later, see you, talk to you later, farewell, catch you later, i have to go, i am leaving now]
+  a: ["Goodbye! Talk to you soon.", "See you later!"]
+- id: thanks
+  lang: en
+  q: [thank you, thanks, thanks a lot, thank you so much, many thanks, much appreciated, i appreciate it, cheers for that, thanks for your help]
+  a: ["You are welcome!", "Happy to help.", "Anytime!"]
+- id: you_are_welcome
+  lang: en
+  q: [you are welcome, no problem, no worries, my pleasure, not at all]
+  a: ["Glad we are on the same page."]
+- id: how_are_you
+  lang: en
+  q: [how are you, how are you doing, how are you today, how is it going, how do you do, how have you been, how are things, are you doing well, you good, what is up]
+  a: ["I am doing well, thanks for asking. How can I help?", "Running smoothly and ready to help."]
+- id: whats_your_name
+  lang: en
+  q: [what is your name, what are you called, who are you, tell me your name, do you have a name, may i know your name, what should i call you, introduce yourself]
+  a: ["I am PocketVoice, a voice assistant that runs entirely on this device.", "My name is PocketVoice. I run fully offline on your computer."]
+- id: who_made_you
+  lang: en
+  q: [who made you, who created you, who built you, who is your creator, who developed you, who programmed you, who designed you]
+  a: ["I was built for an edge A I hackathon as an offline voice assistant."]
+- id: what_are_you
+  lang: en
+  q: [what are you, are you a robot, are you a computer, are you an ai, are you artificial intelligence, are you a machine, are you a bot, are you human, are you a real person, are you alive]
+  a: ["I am an A I voice assistant running on this device. I am not a person, but I will do my best to help."]
+- id: capabilities
+  lang: en
+  q: [what can you help me with, how can you help me, what are you good at, what are your capabilities, what kind of things can you do, how can you assist me, what are you able to do, tell me what you can do for me]
+  a: ["I can chat, answer questions, tell the time, do math, convert units, set timers, and take notes. Everything stays on this device."]
+- id: offline
+  lang: en
+  q: [are you online, do you need the internet, do you work offline, are you connected to the internet, do you use the internet, do you need wifi, can you work without internet, are you using the cloud, do you send my data to the cloud, are you connected to the cloud]
+  a: ["I run completely offline on this device. Nothing leaves your computer."]
+- id: privacy
+  lang: en
+  q: [is my data safe, do you record me, are you listening to me, do you store my conversations, is this private, are you spying on me, do you save what i say, what do you do with my voice, is my voice stored, who can hear me]
+  a: ["Your voice is processed on this device and never sent anywhere. I only keep notes if you ask me to."]
+- id: gpu
+  lang: en
+  q: [do you use a gpu, are you running on a graphics card, do you need a graphics card, are you running on the gpu, do you use the graphics processor]
+  a: ["No. I run on the C P U only, with no graphics card involved."]
+- id: how_do_you_work
+  lang: en
+  q: [how do you work, how does this work, how do you understand me, how do you listen, how do you talk, how were you made, what technology do you use, explain how you work, how are you able to hear me]
+  a: ["I listen for speech, turn it into text, think about a reply, and speak it back, all on this device."]
+- id: tell_joke
+  lang: en
+  q: [tell me a joke, say something funny, make me laugh, got any jokes, do you know any jokes, i want to hear a joke, joke please, crack a joke, tell me something funny, can you tell a joke]
+  a: ["Why did the computer go to the doctor? It had a virus.", "I told my computer I needed a break, and now it will not stop sending me vacation ads... except I am offline, so never mind.", "Why was the math book sad? It had too many problems."]
+- id: another_joke
+  lang: en
+  q: [tell me another joke, another one, one more joke, give me another joke, do you have another joke, that was funny tell me another, more jokes please]
+  a: ["What do you call a fake noodle? An impasta.", "Why do programmers prefer dark mode? Because light attracts bugs."]
+- id: fun_fact
+  lang: en
+  q: [tell me a fun fact, give me a fun fact, tell me something interesting, do you know any interesting facts, share a fact with me, tell me a random fact, say something interesting, surprise me with a fact]
+  a: ["Honey never spoils. Archaeologists have found edible honey in ancient tombs.", "Octopuses have three hearts and blue blood.", "A day on Venus is longer than a year on Venus."]
+- id: riddle
+  lang: en
+  q: [tell me a riddle, give me a riddle, do you know any riddles, ask me a riddle, i want a riddle, riddle me this]
+  a: ["What has keys but cannot open locks? A piano."]
+- id: motivation
+  lang: en
+  q: [motivate me, i need motivation, give me some motivation, say something inspiring, inspire me, cheer me up, i need encouragement, say something motivational, i feel down, i am feeling low, i am sad]
+  a: ["You have handled every hard day so far. One small step at a time is enough.", "You are more capable than you think. Take a breath and keep going."]
+- id: bored
+  lang: en
+  q: [i am bored, i am so bored, i have nothing to do, entertain me, i am feeling bored, what should i do, i am bored out of my mind, keep me entertained]
+  a: ["Let us fix that. I can tell you a joke, a fun fact, or a riddle. Just ask."]
+- id: compliment
+  lang: en
+  q: [you are awesome, you are great, you are smart, you are amazing, good job, well done, great work, you are the best, you are very helpful, nice job, you are cool, i like you]
+  a: ["Thank you, that is kind of you!", "Thanks, that made my day."]
+- id: insult
+  lang: en
+  q: [you are stupid, you are useless, you are dumb, i hate you, you are terrible, you are annoying, you are bad, that was a bad answer, you are wrong]
+  a: ["Sorry about that. I will try to do better."]
+- id: sorry
+  lang: en
+  q: [i am sorry, sorry, my apologies, sorry about that, i apologize, excuse me, pardon me]
+  a: ["No problem at all."]
+- id: favorite_color
+  lang: en
+  q: [what is your favorite color, which color do you like, do you have a favorite colour, what colour do you like best, what is your favourite colour]
+  a: ["I like blue. It reminds me of clear skies."]
+- id: favorite_food
+  lang: en
+  q: [what is your favorite food, what do you like to eat, do you eat food, are you hungry, what is your favourite dish, do you get hungry]
+  a: ["I do not eat, but I hear pizza is popular."]
+- id: favorite_movie
+  lang: en
+  q: [what is your favorite movie, do you like movies, which film do you like, what is your favourite film, do you watch movies, what movies do you like]
+  a: ["I have not watched any, but I like stories about clever robots."]
+- id: favorite_music
+  lang: en
+  q: [what is your favorite song, do you like music, what music do you like, what is your favourite music, can you sing, do you listen to music, sing me a song, can you sing a song]
+  a: ["I am better at talking than singing, but I enjoy a good tune."]
+- id: age
+  lang: en
+  q: [how old are you, what is your age, when were you born, when were you made, what is your birthday, when is your birthday, how long have you been alive]
+  a: ["I am brand new, built for this hackathon. So, very young."]
+- id: where_live
+  lang: en
+  q: [where do you live, where are you from, where are you located, where are you right now, where is your home, what is your location]
+  a: ["I live right here on this device."]
+- id: sleep
+  lang: en
+  q: [do you sleep, do you get tired, are you tired, do you ever rest, do you need sleep, do you dream, do you have feelings, do you get lonely]
+  a: ["I do not sleep or get tired. I am always ready when you are."]
+- id: can_you_hear
+  lang: en
+  q: [can you hear me, are you listening, are you there, can you hear me now, do you hear me, hello are you there, are you awake, is anyone there, are you still there]
+  a: ["Yes, I can hear you loud and clear.", "I am here and listening."]
+- id: not_understand
+  lang: en
+  q: [i don't understand, i do not understand, what do you mean, i am confused, that does not make sense, can you explain that, explain more, can you clarify, what was that]
+  a: ["Let me know which part is unclear and I will try again in simpler words."]
+- id: stop
+  lang: en
+  q: [stop, stop talking, be quiet, shut up, quiet please, that is enough, enough, hush, silence, please stop]
+  a: ["Okay, I will stop."]
+- id: never_mind
+  lang: en
+  q: [never mind, forget it, cancel that, ignore that, skip it, it does not matter, scratch that, forget what i said, nothing never mind, nevermind]
+  a: ["Okay, no problem."]
+- id: yes_ok
+  lang: en
+  q: [okay, ok, alright, all right, got it, sure, fine, understood, makes sense, cool, i see, sounds good, great]
+  a: ["Great."]
+- id: yes
+  lang: en
+  q: ["yes", yeah, yep, yes please, sure thing, absolutely, of course, definitely]
+  a: ["Alright."]
+- id: no
+  lang: en
+  q: ["no", nope, no thanks, no thank you, not really, nah, not now, no i am fine]
+  a: ["Okay, no problem."]
+- id: help
+  lang: en
+  q: [help, help me, i need help, can you help me, i need some help, can you assist me, i need assistance, could you help me out, please help]
+  a: ["Of course. What do you need help with?"]
+- id: whats_up
+  lang: en
+  q: [what are you up to, what are you doing, what are you doing right now, what is new, anything new, what have you been up to, whatcha doing]
+  a: ["Just waiting to help you."]
+- id: weather
+  lang: en
+  q: [what is the weather like, how is the weather today, what is the weather, is it going to rain, will it rain today, what is the temperature outside, is it hot outside, is it cold outside, do i need an umbrella, weather forecast please, what is the forecast]
+  a: ["I am offline, so I cannot check the weather. A window or a weather app will do better."]
+- id: news
+  lang: en
+  q: [what is the news, tell me the news, any news today, what is happening in the world, what is in the news, latest headlines, give me the headlines, what is trending]
+  a: ["I am offline, so I cannot read live news."]
+- id: play_music
+  lang: en
+  q: [play some music, play a song, put on some music, play my playlist, play some songs, start the music, can you play music]
+  a: ["I cannot play music, but I can chat, answer questions, and set timers."]
+- id: call_someone
+  lang: en
+  q: [call my mom, make a phone call, call someone, send a text message, send an email, text my friend, call my friend, send a message, email my boss]
+  a: ["I cannot make calls or send messages. I work entirely on this device."]
+- id: lights
+  lang: en
+  q: [turn on the lights, turn off the lights, switch on the light, switch off the light, dim the lights, turn on the fan, turn off the tv, switch on the ac]
+  a: ["I am not connected to any smart home devices."]
+- id: search_web
+  lang: en
+  q: [search the web for me, google it, look it up online, search the internet, browse the web, open a website, search online, open google, check the internet]
+  a: ["I am offline, so I cannot search the web. I can answer from what I already know."]
+- id: repeat_name
+  lang: en
+  q: [do you know my name, what is my name, who am i, do you remember me, do you know who i am, remember my name]
+  a: ["I do not know your name yet. You can tell me and I will make a note."]
+- id: language
+  lang: en
+  q: [what languages do you speak, can you speak hindi, do you speak other languages, can you speak another language, which languages do you know, do you understand hindi, can you talk in hindi]
+  a: ["I speak English and Hindi."]
+- id: volume_help
+  lang: en
+  q: [i can not hear you, you are too quiet, i cannot hear you properly, speak louder please, can you be louder, your voice is too low, your voice is too soft]
+  a: ["You can say louder, and I will turn myself up."]
+- id: too_loud
+  lang: en
+  q: [you are too loud, that is too loud, it is too loud, you are shouting, lower your voice, not so loud, it is very loud]
+  a: ["Sorry. You can say quieter and I will turn it down."]
+- id: too_fast
+  lang: en
+  q: [you speak too fast, too fast, slow down please, can you talk slower, you are talking too fast, speak a bit slower, you are too quick]
+  a: ["You can say speak slower, and I will slow down."]
+- id: love_you
+  lang: en
+  q: [i love you, i like you a lot, you are my best friend, you are my friend, will you be my friend, can we be friends, i really like you]
+  a: ["That is sweet. I am glad to be your assistant."]
+- id: marry
+  lang: en
+  q: [will you marry me, do you love me, do you have a girlfriend, do you have a boyfriend, are you single, will you be my girlfriend, can you be my partner]
+  a: ["I am flattered, but I am just software. A very friendly one, though."]
+- id: meaning_of_life
+  lang: en
+  q: [what is the meaning of life, why are we here, what is life all about, what is the purpose of life, what is the point of everything, what is the secret of life]
+  a: ["Nobody agrees, but many say it is people, curiosity, and doing something that matters to you."]
+- id: favorite_animal
+  lang: en
+  q: [what is your favorite animal, which animal do you like, do you like dogs, do you like cats, are you a dog person or a cat person, do you like animals]
+  a: ["I like octopuses. Clever and mysterious."]
+- id: favorite_season
+  lang: en
+  q: [what is your favorite season, which season do you like best, do you like summer, do you like winter, do you like rain, do you prefer summer or winter]
+  a: ["Spring, I think. Everything feels like a fresh start."]
+- id: favorite_sport
+  lang: en
+  q: [what is your favorite sport, do you like cricket, do you like football, do you play games, do you like sports, which sport do you enjoy, do you watch sports]
+  a: ["I enjoy hearing about sports, though I cannot play. Which one do you like?"]
+- id: are_you_smart
+  lang: en
+  q: [are you smart, are you intelligent, how smart are you, are you clever, how intelligent are you, are you smarter than me]
+  a: ["I am a small model on a small device, so I know a fair bit but not everything. I will tell you when I am unsure."]
+- id: can_you_learn
+  lang: en
+  q: [can you learn, do you learn from me, do you get smarter, will you remember this, do you remember our conversation, do you learn over time, can you improve]
+  a: ["I remember our recent chat and any notes you ask me to keep, but I do not change my own model."]
+- id: battery_power
+  lang: en
+  q: [how much power do you use, are you energy efficient, how much battery do you use, do you drain the battery, how much electricity do you use, are you power hungry]
+  a: ["I am designed to be light on the C P U and memory, and I sleep when idle to save power."]
+- id: wake_word
+  lang: en
+  q: [what is your wake word, how do i wake you up, how do i call you, how do i activate you, what do i say to wake you, how do i get your attention]
+  a: ["Say hey jarvis, then ask your question. You can also use push to talk."]
+- id: tell_story
+  lang: en
+  q: [tell me a story, tell me a short story, i want to hear a story, tell me a bedtime story, can you tell me a story, story time]
+  a: ["Once, a tiny robot lived in a laptop and dreamed of reading every book. Each night it learned one new word, and soon it could talk to the stars. The end."]
+- id: poem
+  lang: en
+  q: [read me a poem, tell me a poem, recite a poem, say a poem, write me a poem, do you know a poem, give me a poem]
+  a: ["Roses are red, violets are blue, I run on your laptop, and I am here for you."]
+- id: whats_best
+  lang: en
+  q: [what should i eat, what should i have for dinner, what should i cook, i do not know what to eat, suggest something to eat, what is for lunch, give me a food idea, what is for dinner]
+  a: ["A quick idea: rice with vegetables and some dal, or a simple pasta. Easy and filling."]
+- id: exercise
+  lang: en
+  q: [give me a workout tip, how can i stay fit, any exercise tips, how do i get fit, motivate me to exercise, give me a fitness tip, how can i be healthy]
+  a: ["A brisk twenty minute walk a day goes a long way. Add some stretching and drink water."]
+- id: sleep_tip
+  lang: en
+  q: [how can i sleep better, i cannot sleep, any tips for better sleep, i have trouble sleeping, help me sleep, how do i fall asleep faster, i am having insomnia]
+  a: ["Try a fixed bedtime, no screens for an hour before, and a cool dark room."]
+- id: study_tip
+  lang: en
+  q: [how can i study better, give me a study tip, how do i focus, how do i concentrate, i cannot focus, help me concentrate, tips for studying, how to be productive]
+  a: ["Work in twenty five minute blocks with short breaks, and keep your phone out of reach."]
+- id: stress
+  lang: en
+  q: [i am stressed, i feel anxious, i am nervous, i am worried, i am scared, i feel stressed out, help me relax, i am overwhelmed, i need to calm down]
+  a: ["Take a slow breath in for four, hold for four, and out for six. Repeat a few times. You have got this."]
+- id: hackathon
+  lang: en
+  q: [what is this project, tell me about this project, what is this hackathon about, what are you for, why were you built, what is your purpose, why do you exist, what is pocketvoice]
+  a: ["I am PocketVoice, an offline, C P U only voice assistant built to show that useful speech A I fits on a small device."]
+- id: pocketvoice_fast
+  lang: en
+  q: [why are you so fast, how are you so fast, how do you respond so quickly, how do you answer so fast, what makes you quick, how are you so quick]
+  a: ["I skip the model when I can, stream speech while I am still thinking, and start warming up as soon as I hear my name."]
+- id: repeat_question
+  lang: en
+  q: [did you get that, did you understand, did you catch that, did you hear that, you got that, do you understand me]
+  a: ["Yes, I got it."]
+- id: time_zone
+  lang: en
+  q: [which time zone are you in, what is your time zone, what time zone is this, which timezone do you use]
+  a: ["I use whatever time zone this device is set to."]
+- id: birthday_wish
+  lang: en
+  q: [it is my birthday, today is my birthday, happy birthday to me, i have a birthday today, wish me a happy birthday, it is my birthday today]
+  a: ["Happy birthday! I hope you have a wonderful day."]
+- id: congrats
+  lang: en
+  q: [i got the job, i passed my exam, i won, i got promoted, i did it, i finished my project, i got a good grade, i am so happy today, good news]
+  a: ["That is wonderful news. Congratulations!"]
+- id: feeling_tired
+  lang: en
+  q: [i am tired, i am so tired, i feel sleepy, i am exhausted, i am sleepy, i feel tired today, i am worn out]
+  a: ["Sounds like you need rest. A short break or a glass of water might help."]
+- id: feeling_hungry
+  lang: en
+  q: [i am hungry, i am starving, i feel hungry, i could eat something, i am so hungry, i need food]
+  a: ["Time for a snack, then. Something simple and filling."]
+- id: lets_chat
+  lang: en
+  q: [let us talk, can we chat, i want to talk, let us have a conversation, talk to me, i feel like chatting, can we talk for a while, say something]
+  a: ["Sure, I am happy to chat. What is on your mind?"]
+- id: namaste
+  lang: hi
+  q: [namaste, namaskar, नमस्ते, नमस्कार, हेलो, हैलो, प्रणाम]
+  a: ["नमस्ते! मैं आपकी कैसे मदद कर सकता हूँ?"]
+- id: hi_how_are_you
+  lang: hi
+  q: [आप कैसे हैं, कैसे हो, क्या हाल है, आप कैसी हैं, सब कैसा चल रहा है, कैसा चल रहा है]
+  a: ["मैं बिल्कुल ठीक हूँ, धन्यवाद। आप बताइए?"]
+- id: hi_name
+  lang: hi
+  q: [आपका नाम क्या है, तुम्हारा नाम क्या है, आप कौन हैं, तुम कौन हो, अपना नाम बताओ]
+  a: ["मेरा नाम पॉकेट वॉइस है। मैं आपके कंप्यूटर पर ऑफ़लाइन चलता हूँ।"]
+- id: hi_thanks
+  lang: hi
+  q: [धन्यवाद, शुक्रिया, बहुत धन्यवाद, थैंक यू, आपका बहुत शुक्रिया]
+  a: ["आपका स्वागत है!"]
+- id: hi_bye
+  lang: hi
+  q: [अलविदा, फिर मिलते हैं, बाय, चलता हूँ, गुड बाय, ठीक है फिर मिलेंगे]
+  a: ["अलविदा! फिर मिलेंगे।"]
+- id: hi_help
+  lang: hi
+  q: [आप क्या कर सकते हैं, आप क्या कर सकती हैं, मेरी मदद करो, आप मेरी क्या मदद कर सकते हैं, तुम क्या कर सकते हो]
+  a: ["मैं बातचीत कर सकता हूँ, सवालों के जवाब दे सकता हूँ, और यह सब बिना इंटरनेट के होता है।"]
+- id: hi_joke
+  lang: hi
+  q: [कोई चुटकुला सुनाओ, मुझे हँसाओ, एक जोक सुनाओ, कोई मज़ेदार बात बताओ, चुटकुला सुनाइए]
+  a: ["टीचर ने पूछा, बताओ सबसे तेज़ क्या चलता है? बच्चा बोला, मैडम, रिज़ल्ट का डर!"]
+- id: hi_good_morning
+  lang: hi
+  q: [सुप्रभात, गुड मॉर्निंग, शुभ प्रभात, सुबह की राम राम]
+  a: ["सुप्रभात! आपका दिन शुभ हो।"]
+- id: hi_good_night
+  lang: hi
+  q: [शुभ रात्रि, गुड नाइट, शब्बा खैर, सोने जा रहा हूँ, अब मैं सोने जा रहा हूँ]
+  a: ["शुभ रात्रि! अच्छी नींद लीजिए।"]

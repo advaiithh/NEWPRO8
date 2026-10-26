@@ -1,0 +1,76 @@
+# Main benchmark requests. kind: skill | cache | open.
+# skill: `expect` = regex that the reply must match. cache: `intent` = intent id that should answer
+# (cache requests are paraphrases, deliberately NOT copies of pv/router/intents.yaml entries).
+# open: `any` = at least one keyword must appear in the reply (quality rubric, lower-case).
+# lang hi: Hindi, spoken with the hi_IN Piper voice.
+- {id: s01, kind: skill, text: "what time is it right now", expect: "\\d{1,2}:\\d{2}"}
+- {id: s02, kind: skill, text: "tell me the current time", expect: "\\d{1,2}:\\d{2}"}
+- {id: s03, kind: skill, text: "what is today's date", expect: "20\\d\\d"}
+- {id: s04, kind: skill, text: "which day of the week is it", expect: "(Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day"}
+- {id: s05, kind: skill, text: "what is seventeen times twenty three", expect: "391"}
+- {id: s06, kind: skill, text: "what is 144 divided by 12", expect: "\\b12\\b"}
+- {id: s07, kind: skill, text: "what is 250 plus 175", expect: "425"}
+- {id: s08, kind: skill, text: "twenty percent of 450", expect: "\\b90\\b"}
+- {id: s09, kind: skill, text: "what is the square root of 81", expect: "\\b9\\b"}
+- {id: s10, kind: skill, text: "what is 1000 minus 357", expect: "643"}
+- {id: s11, kind: skill, text: "convert 10 miles to kilometers", expect: "16\\.[01]"}
+- {id: s12, kind: skill, text: "how many centimeters in 5 inches", expect: "12\\.7"}
+- {id: s13, kind: skill, text: "convert 100 fahrenheit to celsius", expect: "37\\.[78]"}
+- {id: s14, kind: skill, text: "convert 5 kilograms to pounds", expect: "11\\.0"}
+- {id: s15, kind: skill, text: "set a timer for ten minutes", expect: "timer"}
+- {id: s16, kind: skill, text: "flip a coin", expect: "heads|tails"}
+- {id: s17, kind: skill, text: "roll a dice", expect: "rolled|\\b[1-6]\\b"}
+- {id: s18, kind: skill, text: "remember that my locker code is four two seven", expect: "remember|noted"}
+- {id: s19, kind: skill, text: "what can you do", expect: "time|math|chat|question"}
+- {id: s20, kind: skill, text: "how many feet in a mile", expect: "5280|5,280|5 thousand"}
+- {id: c01, kind: cache, text: "hi friend how is your day going", intent: how_are_you}
+- {id: c02, kind: cache, text: "could you tell me who you are", intent: whats_your_name}
+- {id: c03, kind: cache, text: "make me smile with a joke", intent: tell_joke}
+- {id: c04, kind: cache, text: "thanks a ton for that", intent: thanks}
+- {id: c05, kind: cache, text: "see you tomorrow then", intent: goodbye}
+- {id: c06, kind: cache, text: "do I need internet to talk to you", intent: offline}
+- {id: c07, kind: cache, text: "is anything I say uploaded somewhere", intent: privacy}
+- {id: c08, kind: cache, text: "who is the person that built you", intent: who_made_you}
+- {id: c09, kind: cache, text: "you did a great job", intent: compliment}
+- {id: c10, kind: cache, text: "tell me an interesting fact", intent: fun_fact}
+- {id: c11, kind: cache, text: "I could use some cheering up", intent: motivation}
+- {id: c12, kind: cache, text: "are you running on the graphics card", intent: gpu}
+- {id: c13, kind: cache, text: "I am pretty tired today", intent: feeling_tired}
+- {id: c14, kind: cache, text: "good night and sleep tight", intent: good_night}
+- {id: c15, kind: cache, text: "tell me a short tale", intent: tell_story}
+- {id: c16, kind: cache, text: "is it raining outside", intent: weather}
+- {id: c17, kind: cache, text: "do you understand Hindi", intent: language}
+- {id: c18, kind: cache, text: "speak more slowly please", intent: too_fast}
+- {id: c19, kind: cache, text: "how old might you be", intent: age}
+- {id: c20, kind: cache, text: "good evening to you my friend", intent: good_evening}
+- {id: o01, kind: open, text: "what is the capital of Japan", any: [tokyo]}
+- {id: o02, kind: open, text: "who wrote Romeo and Juliet", any: [shakespeare]}
+- {id: o03, kind: open, text: "why is the sky blue", any: [scatter, rayleigh, wavelength]}
+- {id: o04, kind: open, text: "how many days are there in a leap year", any: ["366", "three hundred sixty six", "three hundred and sixty six"]}
+- {id: o05, kind: open, text: "what is photosynthesis", any: [sunlight, light, plants, oxygen]}
+- {id: o06, kind: open, text: "which planet is the largest in our solar system", any: [jupiter]}
+- {id: o07, kind: open, text: "who painted the Mona Lisa", any: [leonardo, vinci]}
+- {id: o08, kind: open, text: "at what temperature does water boil in Celsius", any: ["100", "hundred"]}
+- {id: o09, kind: open, text: "explain gravity in simple words", any: [pull, attract, force, mass, fall]}
+- {id: o10, kind: open, text: "what causes rain", any: [cloud, vapor, vapour, condens, evaporat, droplet]}
+- {id: o11, kind: open, text: "what is the largest ocean on earth", any: [pacific]}
+- {id: o12, kind: open, text: "who discovered gravity", any: [newton]}
+- {id: o13, kind: open, text: "what is the chemical symbol for gold", any: [au]}
+- {id: o14, kind: open, text: "how many continents are there", any: ["seven", "7"]}
+- {id: o15, kind: open, text: "what do bees make", any: [honey]}
+- {id: o16, kind: open, text: "what language is spoken in Brazil", any: [portuguese]}
+- {id: o17, kind: open, text: "what is the tallest mountain in the world", any: [everest]}
+- {id: o18, kind: open, text: "give me one tip for a healthy breakfast", any: [fruit, egg, oat, protein, whole, yogurt, yoghurt, fiber, fibre, vegetable]}
+- {id: o19, kind: open, text: "what is the speed of light", any: ["299", "300,000", "three hundred thousand", "186,000", "light"]}
+- {id: o20, kind: open, text: "why do we have seasons", any: [tilt, axis, orbit, sun]}
+# Hindi (Devanagari). `intent` for cache-type, `any` for open.
+- {id: h01, kind: cache, lang: hi, text: "नमस्ते", intent: namaste}
+- {id: h02, kind: cache, lang: hi, text: "आप कैसे हैं", intent: hi_how_are_you}
+- {id: h03, kind: cache, lang: hi, text: "आपका नाम क्या है", intent: hi_name}
+- {id: h04, kind: cache, lang: hi, text: "धन्यवाद", intent: hi_thanks}
+- {id: h05, kind: cache, lang: hi, text: "एक चुटकुला सुनाओ", intent: hi_joke}
+- {id: h06, kind: cache, lang: hi, text: "सुप्रभात", intent: hi_good_morning}
+- {id: h07, kind: cache, lang: hi, text: "शुभ रात्रि", intent: hi_good_night}
+- {id: h08, kind: cache, lang: hi, text: "अलविदा", intent: hi_bye}
+- {id: h09, kind: cache, lang: hi, text: "आप क्या कर सकते हैं", intent: hi_help}
+- {id: h10, kind: open, lang: hi, text: "भारत की राजधानी क्या है", any: ["दिल्ली", "delhi"]}

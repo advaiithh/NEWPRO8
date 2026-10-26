@@ -1,0 +1,106 @@
+# 105 questions across areas. `any`: at least one keyword (lower-case) must appear in the spoken answer.
+- {id: k01, area: geography, text: "what is the capital of Australia", any: [canberra]}
+- {id: k02, area: geography, text: "which is the longest river in the world", any: [nile, amazon]}
+- {id: k03, area: geography, text: "what is the largest country in the world", any: [russia]}
+- {id: k04, area: geography, text: "what is the capital of Canada", any: [ottawa]}
+- {id: k05, area: geography, text: "which continent is Egypt in", any: [africa]}
+- {id: k06, area: geography, text: "what is the smallest country in the world", any: [vatican]}
+- {id: k07, area: history, text: "who was the first president of the United States", any: [washington]}
+- {id: k08, area: history, text: "in which year did World War Two end", any: ["1945"]}
+- {id: k09, area: history, text: "who was Napoleon Bonaparte", any: [france, french, emperor]}
+- {id: k10, area: history, text: "what was the Roman Empire", any: [rome, roman, empire]}
+- {id: k11, area: history, text: "who was Mahatma Gandhi", any: [india, indian, nonviolen, independence]}
+- {id: k12, area: history, text: "what was the French Revolution", any: [france, french, revolution]}
+- {id: k13, area: science, text: "what is photosynthesis", any: [plant, sunlight, light, carbon]}
+- {id: k14, area: science, text: "what is a black hole", any: [gravity, light, space]}
+- {id: k15, area: science, text: "what is DNA", any: [gene, molecule, genetic, acid]}
+- {id: k16, area: science, text: "what is the chemical formula of water", any: [h2o, "h 2 o", hydrogen]}
+- {id: k17, area: science, text: "how many bones are in the adult human body", any: ["206", "two hundred"]}
+- {id: k18, area: science, text: "what is the boiling point of water in Fahrenheit", any: ["212", "two hundred"]}
+- {id: k19, area: science, text: "what is gravity", any: [force, attract, mass, pull]}
+- {id: k20, area: science, text: "what is an atom", any: [matter, proton, particle, electron, smallest]}
+- {id: k21, area: space, text: "which planet is closest to the sun", any: [mercury]}
+- {id: k22, area: space, text: "who was the first man on the moon", any: [armstrong]}
+- {id: k23, area: space, text: "what is the Milky Way", any: [galaxy]}
+- {id: k24, area: space, text: "what is a comet", any: [ice, sun, tail, orbit]}
+- {id: k25, area: biology, text: "what is a mammal", any: [warm, milk, hair, animal]}
+- {id: k26, area: biology, text: "what do pandas eat", any: [bamboo]}
+- {id: k27, area: biology, text: "what is the largest animal on earth", any: [whale]}
+- {id: k28, area: biology, text: "what is the heart", any: [blood, pump, organ]}
+- {id: k29, area: technology, text: "what is the internet", any: [network, computer, world]}
+- {id: k30, area: technology, text: "what is artificial intelligence", any: [computer, machine, intelligen, human]}
+- {id: k31, area: technology, text: "who founded Microsoft", any: [gates, allen]}
+- {id: k32, area: technology, text: "what is a smartphone", any: [phone, mobile, computer]}
+- {id: k33, area: technology, text: "what is Linux", any: [operating system, kernel, torvalds, open]}
+- {id: k34, area: technology, text: "who invented the telephone", any: [bell]}
+- {id: k35, area: math, text: "what is the Pythagorean theorem", any: [triangle, hypotenuse, square]}
+- {id: k36, area: math, text: "what is a prime number", any: [divisible, divid, only, two]}
+- {id: k37, area: math, text: "what is the value of pi", any: ["3.14", "3.1", "three point one"]}
+- {id: k38, area: arts, text: "who wrote Hamlet", any: [shakespeare]}
+- {id: k39, area: arts, text: "who painted the Mona Lisa", any: [leonardo, vinci]}
+- {id: k40, area: arts, text: "who composed the Fifth Symphony", any: [beethoven]}
+- {id: k41, area: arts, text: "who wrote Pride and Prejudice", any: [austen]}
+- {id: k42, area: arts, text: "what is the Taj Mahal", any: [agra, tomb, india, mausoleum, mosque]}
+- {id: k43, area: sports, text: "how many players are in a football team on the field", any: ["11", eleven]}
+- {id: k44, area: sports, text: "what is cricket", any: [bat, ball, sport, team]}
+- {id: k45, area: sports, text: "where were the first modern Olympic Games held", any: [athens, greece]}
+- {id: k46, area: sports, text: "what is the Olympic Games", any: [sport, athlet, olympic, every four]}
+- {id: k47, area: health, text: "what is a vitamin", any: [nutrient, body, food, need]}
+- {id: k48, area: health, text: "what is diabetes", any: [sugar, insulin, glucose, blood]}
+- {id: k49, area: health, text: "what does the liver do", any: [bile, digest, detox, filter, organ, body]}
+- {id: k50, area: economics, text: "what is inflation", any: [price, money, cost]}
+- {id: k51, area: economics, text: "what is a stock market", any: [share, stock, buy, sell, compan]}
+- {id: k52, area: economics, text: "what is GDP", any: [gross, domestic, product, economy, value]}
+- {id: k53, area: language, text: "what is the most spoken language in the world", any: [english, mandarin, chinese]}
+- {id: k54, area: language, text: "what is a noun", any: [person, place, thing, word, name]}
+- {id: k55, area: food, text: "what is pizza", any: [italy, italian, dough, cheese, dish, food]}
+- {id: k56, area: food, text: "what is sushi", any: [rice, japan, fish]}
+- {id: k57, area: general, text: "what is the United Nations", any: [organi, countries, nations, peace]}
+- {id: k58, area: general, text: "what is democracy", any: [people, vote, government, rule, elect]}
+- {id: k59, area: general, text: "how many days are in a leap year", any: ["366", "three hundred sixty six", "three hundred and sixty six"]}
+- {id: k60, area: general, text: "what is the tallest mountain in the world", any: [everest]}
+- {id: k61, area: hard, text: "who was Nikola Tesla", any: [inventor, electric, engineer, serbian, alternating]}
+- {id: k62, area: hard, text: "what is the capital of Kazakhstan", any: [astana, nur-sultan, nursultan]}
+- {id: k63, area: hard, text: "what is the Treaty of Versailles", any: [world war, germany, peace, 1919]}
+- {id: k64, area: hard, text: "what are mitochondria", any: [energy, cell, organelle, power]}
+- {id: k65, area: hard, text: "who was Cleopatra", any: [egypt, queen, pharaoh]}
+- {id: k66, area: hard, text: "what is the Magna Carta", any: [king, john, 1215, rights, charter]}
+- {id: k67, area: hard, text: "what is the Great Barrier Reef", any: [australia, coral, queensland]}
+- {id: k68, area: hard, text: "who was Marie Curie", any: [radioactiv, physicist, chemist, nobel, polonium, radium]}
+- {id: k69, area: hard, text: "what is the Amazon rainforest", any: [brazil, south america, forest, rain]}
+- {id: k70, area: hard, text: "what is the Renaissance", any: [europe, art, rebirth, italy, period, culture]}
+- {id: k71, area: hard, text: "who was Genghis Khan", any: [mongol, empire, ruler, khan]}
+- {id: k72, area: hard, text: "what is quantum mechanics", any: [physics, atoms, particles, small, energy, quantum]}
+- {id: k73, area: hard, text: "what is the Industrial Revolution", any: [factor, machine, britain, industry, 18]}
+- {id: k74, area: hard, text: "what is the Sahara", any: [desert, africa]}
+- {id: k75, area: hard, text: "who was Alexander the Great", any: [macedon, greek, king, conquer]}
+- {id: k76, area: hard, text: "what is the Mariana Trench", any: [deep, ocean, pacific, trench]}
+- {id: k77, area: hard, text: "what is the theory of evolution", any: [darwin, species, natural selection, change]}
+- {id: k78, area: hard, text: "what is the Hubble Space Telescope", any: [telescope, orbit, space, nasa]}
+- {id: k79, area: hard, text: "who was Leonardo da Vinci", any: [italian, painter, artist, renaissance, inventor]}
+- {id: k80, area: hard, text: "what is the Berlin Wall", any: [berlin, germany, wall, east, west, cold war]}
+- {id: k81, area: hard, text: "what is the capital of Mongolia", any: [ulaanbaatar, ulan bator]}
+- {id: k82, area: hard, text: "what is a haiku", any: [japan, poem, syllable, seventeen]}
+- {id: k83, area: hard, text: "what is the Himalayas", any: [mountain, asia, nepal, india, range]}
+- {id: k84, area: hard, text: "what is cryptocurrency", any: [digital, money, bitcoin, currency, blockchain]}
+- {id: k85, area: hard, text: "what is the Suez Canal", any: [egypt, canal, sea, red sea, mediterranean, ship]}
+- {id: k86, area: obscure, text: "what is the capital of Burkina Faso", any: [ouagadougou]}
+- {id: k87, area: obscure, text: "who was Hypatia", any: [alexandria, mathematic, philosopher, astronom]}
+- {id: k88, area: obscure, text: "what is the Treaty of Westphalia", any: [1648, thirty years, peace, europe]}
+- {id: k89, area: obscure, text: "what is the capital of Bhutan", any: [thimphu]}
+- {id: k90, area: obscure, text: "who was Ada Lovelace", any: [program, computer, babbage, mathematic]}
+- {id: k91, area: obscure, text: "what is the Rosetta Stone", any: [egypt, hieroglyph, decipher, translat, language, writing]}
+- {id: k92, area: obscure, text: "what is the capital of Uzbekistan", any: [tashkent]}
+- {id: k93, area: obscure, text: "who was Pythagoras", any: [greek, mathematic, philosopher, triangle]}
+- {id: k94, area: obscure, text: "what is the Krebs cycle", any: [cell, energy, respiration, acid, metabol, mitochondri]}
+- {id: k95, area: obscure, text: "what is the Gutenberg Bible", any: [print, book, gutenberg, press, bible]}
+- {id: k96, area: obscure, text: "what is the capital of Madagascar", any: [antananarivo]}
+- {id: k97, area: obscure, text: "who was Rosalind Franklin", any: [dna, x-ray, chemist, crystallograph, structure]}
+- {id: k98, area: obscure, text: "what is the Voyager 1 spacecraft", any: [nasa, space, probe, interstellar, launched, 1977]}
+- {id: k99, area: obscure, text: "what is the Lake Baikal", any: [russia, siberia, deep, lake, freshwater]}
+- {id: k100, area: obscure, text: "what is the capital of Paraguay", any: [asuncion, asunción]}
+- {id: k101, area: obscure, text: "who was Srinivasa Ramanujan", any: [indian, mathematic, india, number]}
+- {id: k102, area: obscure, text: "what is the Antikythera mechanism", any: [greek, ancient, computer, astronom, device, calculat]}
+- {id: k103, area: obscure, text: "what is the Kon-Tiki expedition", any: [heyerdahl, raft, pacific, polynesia, sail]}
+- {id: k104, area: obscure, text: "who was Tycho Brahe", any: [danish, astronom, kepler, observ, denmark]}
+- {id: k105, area: obscure, text: "what is the capital of Suriname", any: [paramaribo]}

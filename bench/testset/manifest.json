@@ -1,0 +1,1022 @@
+[
+ {
+  "id": "s01",
+  "kind": "skill",
+  "text": "what time is it right now",
+  "expect": "\\d{1,2}:\\d{2}",
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.54,
+  "noise_snr": null
+ },
+ {
+  "id": "s02",
+  "kind": "skill",
+  "text": "tell me the current time",
+  "expect": "\\d{1,2}:\\d{2}",
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.35,
+  "noise_snr": null
+ },
+ {
+  "id": "s03",
+  "kind": "skill",
+  "text": "what is today's date",
+  "expect": "20\\d\\d",
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.17,
+  "noise_snr": null
+ },
+ {
+  "id": "s04",
+  "kind": "skill",
+  "text": "which day of the week is it",
+  "expect": "(Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day",
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.27,
+  "noise_snr": null
+ },
+ {
+  "id": "s05",
+  "kind": "skill",
+  "text": "what is seventeen times twenty three",
+  "expect": "391",
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 2.08,
+  "noise_snr": null
+ },
+ {
+  "id": "s06",
+  "kind": "skill",
+  "text": "what is 144 divided by 12",
+  "expect": "\\b12\\b",
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 2.67,
+  "noise_snr": null
+ },
+ {
+  "id": "s07",
+  "kind": "skill",
+  "text": "what is 250 plus 175",
+  "expect": "425",
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 2.98,
+  "noise_snr": null
+ },
+ {
+  "id": "s08",
+  "kind": "skill",
+  "text": "twenty percent of 450",
+  "expect": "\\b90\\b",
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 2.69,
+  "noise_snr": null
+ },
+ {
+  "id": "s09",
+  "kind": "skill",
+  "text": "what is the square root of 81",
+  "expect": "\\b9\\b",
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 2.03,
+  "noise_snr": null
+ },
+ {
+  "id": "s10",
+  "kind": "skill",
+  "text": "what is 1000 minus 357",
+  "expect": "643",
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 2.64,
+  "noise_snr": null
+ },
+ {
+  "id": "s11",
+  "kind": "skill",
+  "text": "convert 10 miles to kilometers",
+  "expect": "16\\.[01]",
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.89,
+  "noise_snr": null
+ },
+ {
+  "id": "s12",
+  "kind": "skill",
+  "text": "how many centimeters in 5 inches",
+  "expect": "12\\.7",
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 2.03,
+  "noise_snr": null
+ },
+ {
+  "id": "s13",
+  "kind": "skill",
+  "text": "convert 100 fahrenheit to celsius",
+  "expect": "37\\.[78]",
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 2.46,
+  "noise_snr": null
+ },
+ {
+  "id": "s14",
+  "kind": "skill",
+  "text": "convert 5 kilograms to pounds",
+  "expect": "11\\.0",
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 2.0,
+  "noise_snr": null
+ },
+ {
+  "id": "s15",
+  "kind": "skill",
+  "text": "set a timer for ten minutes",
+  "expect": "timer",
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.47,
+  "noise_snr": null
+ },
+ {
+  "id": "s16",
+  "kind": "skill",
+  "text": "flip a coin",
+  "expect": "heads|tails",
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 0.75,
+  "noise_snr": null
+ },
+ {
+  "id": "s17",
+  "kind": "skill",
+  "text": "roll a dice",
+  "expect": "rolled|\\b[1-6]\\b",
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.31,
+  "noise_snr": null
+ },
+ {
+  "id": "s18",
+  "kind": "skill",
+  "text": "remember that my locker code is four two seven",
+  "expect": "remember|noted",
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 2.62,
+  "noise_snr": null
+ },
+ {
+  "id": "s19",
+  "kind": "skill",
+  "text": "what can you do",
+  "expect": "time|math|chat|question",
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 0.99,
+  "noise_snr": null
+ },
+ {
+  "id": "s20",
+  "kind": "skill",
+  "text": "how many feet in a mile",
+  "expect": "5280|5,280|5 thousand",
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.5,
+  "noise_snr": null
+ },
+ {
+  "id": "c01",
+  "kind": "cache",
+  "text": "hi friend how is your day going",
+  "intent": "how_are_you",
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.79,
+  "noise_snr": null
+ },
+ {
+  "id": "c02",
+  "kind": "cache",
+  "text": "could you tell me who you are",
+  "intent": "whats_your_name",
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.43,
+  "noise_snr": null
+ },
+ {
+  "id": "c03",
+  "kind": "cache",
+  "text": "make me smile with a joke",
+  "intent": "tell_joke",
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.58,
+  "noise_snr": null
+ },
+ {
+  "id": "c04",
+  "kind": "cache",
+  "text": "thanks a ton for that",
+  "intent": "thanks",
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.18,
+  "noise_snr": null
+ },
+ {
+  "id": "c05",
+  "kind": "cache",
+  "text": "see you tomorrow then",
+  "intent": "goodbye",
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.28,
+  "noise_snr": null
+ },
+ {
+  "id": "c06",
+  "kind": "cache",
+  "text": "do I need internet to talk to you",
+  "intent": "offline",
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.87,
+  "noise_snr": null
+ },
+ {
+  "id": "c07",
+  "kind": "cache",
+  "text": "is anything I say uploaded somewhere",
+  "intent": "privacy",
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 2.13,
+  "noise_snr": null
+ },
+ {
+  "id": "c08",
+  "kind": "cache",
+  "text": "who is the person that built you",
+  "intent": "who_made_you",
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.6,
+  "noise_snr": null
+ },
+ {
+  "id": "c09",
+  "kind": "cache",
+  "text": "you did a great job",
+  "intent": "compliment",
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.61,
+  "noise_snr": null
+ },
+ {
+  "id": "c10",
+  "kind": "cache",
+  "text": "tell me an interesting fact",
+  "intent": "fun_fact",
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.47,
+  "noise_snr": null
+ },
+ {
+  "id": "c11",
+  "kind": "cache",
+  "text": "I could use some cheering up",
+  "intent": "motivation",
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.76,
+  "noise_snr": null
+ },
+ {
+  "id": "c12",
+  "kind": "cache",
+  "text": "are you running on the graphics card",
+  "intent": "gpu",
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.93,
+  "noise_snr": null
+ },
+ {
+  "id": "c13",
+  "kind": "cache",
+  "text": "I am pretty tired today",
+  "intent": "feeling_tired",
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.5,
+  "noise_snr": null
+ },
+ {
+  "id": "c14",
+  "kind": "cache",
+  "text": "good night and sleep tight",
+  "intent": "good_night",
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.53,
+  "noise_snr": null
+ },
+ {
+  "id": "c15",
+  "kind": "cache",
+  "text": "tell me a short tale",
+  "intent": "tell_story",
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.4,
+  "noise_snr": null
+ },
+ {
+  "id": "c16",
+  "kind": "cache",
+  "text": "is it raining outside",
+  "intent": "weather",
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.2,
+  "noise_snr": null
+ },
+ {
+  "id": "c17",
+  "kind": "cache",
+  "text": "do you understand Hindi",
+  "intent": "language",
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.54,
+  "noise_snr": null
+ },
+ {
+  "id": "c18",
+  "kind": "cache",
+  "text": "speak more slowly please",
+  "intent": "too_fast",
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.79,
+  "noise_snr": null
+ },
+ {
+  "id": "c19",
+  "kind": "cache",
+  "text": "how old might you be",
+  "intent": "age",
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.26,
+  "noise_snr": null
+ },
+ {
+  "id": "c20",
+  "kind": "cache",
+  "text": "good evening to you my friend",
+  "intent": "good_evening",
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.37,
+  "noise_snr": null
+ },
+ {
+  "id": "o01",
+  "kind": "open",
+  "text": "what is the capital of Japan",
+  "any": [
+   "tokyo"
+  ],
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.87,
+  "noise_snr": null
+ },
+ {
+  "id": "o02",
+  "kind": "open",
+  "text": "who wrote Romeo and Juliet",
+  "any": [
+   "shakespeare"
+  ],
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.63,
+  "noise_snr": null
+ },
+ {
+  "id": "o03",
+  "kind": "open",
+  "text": "why is the sky blue",
+  "any": [
+   "scatter",
+   "rayleigh",
+   "wavelength"
+  ],
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.37,
+  "noise_snr": null
+ },
+ {
+  "id": "o04",
+  "kind": "open",
+  "text": "how many days are there in a leap year",
+  "any": [
+   "366",
+   "three hundred sixty six",
+   "three hundred and sixty six"
+  ],
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.85,
+  "noise_snr": null
+ },
+ {
+  "id": "o05",
+  "kind": "open",
+  "text": "what is photosynthesis",
+  "any": [
+   "sunlight",
+   "light",
+   "plants",
+   "oxygen"
+  ],
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.41,
+  "noise_snr": null
+ },
+ {
+  "id": "o06",
+  "kind": "open",
+  "text": "which planet is the largest in our solar system",
+  "any": [
+   "jupiter"
+  ],
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 2.68,
+  "noise_snr": null
+ },
+ {
+  "id": "o07",
+  "kind": "open",
+  "text": "who painted the Mona Lisa",
+  "any": [
+   "leonardo",
+   "vinci"
+  ],
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.49,
+  "noise_snr": null
+ },
+ {
+  "id": "o08",
+  "kind": "open",
+  "text": "at what temperature does water boil in Celsius",
+  "any": [
+   "100",
+   "hundred"
+  ],
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 2.67,
+  "noise_snr": null
+ },
+ {
+  "id": "o09",
+  "kind": "open",
+  "text": "explain gravity in simple words",
+  "any": [
+   "pull",
+   "attract",
+   "force",
+   "mass",
+   "fall"
+  ],
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 2.26,
+  "noise_snr": null
+ },
+ {
+  "id": "o10",
+  "kind": "open",
+  "text": "what causes rain",
+  "any": [
+   "cloud",
+   "vapor",
+   "vapour",
+   "condens",
+   "evaporat",
+   "droplet"
+  ],
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.83,
+  "noise_snr": null
+ },
+ {
+  "id": "o11",
+  "kind": "open",
+  "text": "what is the largest ocean on earth",
+  "any": [
+   "pacific"
+  ],
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 2.0,
+  "noise_snr": null
+ },
+ {
+  "id": "o12",
+  "kind": "open",
+  "text": "who discovered gravity",
+  "any": [
+   "newton"
+  ],
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.27,
+  "noise_snr": null
+ },
+ {
+  "id": "o13",
+  "kind": "open",
+  "text": "what is the chemical symbol for gold",
+  "any": [
+   "au"
+  ],
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 2.19,
+  "noise_snr": null
+ },
+ {
+  "id": "o14",
+  "kind": "open",
+  "text": "how many continents are there",
+  "any": [
+   "seven",
+   "7"
+  ],
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.41,
+  "noise_snr": null
+ },
+ {
+  "id": "o15",
+  "kind": "open",
+  "text": "what do bees make",
+  "any": [
+   "honey"
+  ],
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.07,
+  "noise_snr": null
+ },
+ {
+  "id": "o16",
+  "kind": "open",
+  "text": "what language is spoken in Brazil",
+  "any": [
+   "portuguese"
+  ],
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 2.5,
+  "noise_snr": null
+ },
+ {
+  "id": "o17",
+  "kind": "open",
+  "text": "what is the tallest mountain in the world",
+  "any": [
+   "everest"
+  ],
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 2.0,
+  "noise_snr": null
+ },
+ {
+  "id": "o18",
+  "kind": "open",
+  "text": "give me one tip for a healthy breakfast",
+  "any": [
+   "fruit",
+   "egg",
+   "oat",
+   "protein",
+   "whole",
+   "yogurt",
+   "yoghurt",
+   "fiber",
+   "fibre",
+   "vegetable"
+  ],
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 2.02,
+  "noise_snr": null
+ },
+ {
+  "id": "o19",
+  "kind": "open",
+  "text": "what is the speed of light",
+  "any": [
+   "299",
+   "300,000",
+   "three hundred thousand",
+   "186,000",
+   "light"
+  ],
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.5,
+  "noise_snr": null
+ },
+ {
+  "id": "o20",
+  "kind": "open",
+  "text": "why do we have seasons",
+  "any": [
+   "tilt",
+   "axis",
+   "orbit",
+   "sun"
+  ],
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.38,
+  "noise_snr": null
+ },
+ {
+  "id": "h01",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "नमस्ते",
+  "intent": "namaste",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 0.87,
+  "noise_snr": null
+ },
+ {
+  "id": "h02",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "आप कैसे हैं",
+  "intent": "hi_how_are_you",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 1.17,
+  "noise_snr": null
+ },
+ {
+  "id": "h03",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "आपका नाम क्या है",
+  "intent": "hi_name",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 1.34,
+  "noise_snr": null
+ },
+ {
+  "id": "h04",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "धन्यवाद",
+  "intent": "hi_thanks",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 1.06,
+  "noise_snr": null
+ },
+ {
+  "id": "h05",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "एक चुटकुला सुनाओ",
+  "intent": "hi_joke",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 1.44,
+  "noise_snr": null
+ },
+ {
+  "id": "h06",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "सुप्रभात",
+  "intent": "hi_good_morning",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 0.98,
+  "noise_snr": null
+ },
+ {
+  "id": "h07",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "शुभ रात्रि",
+  "intent": "hi_good_night",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 1.0,
+  "noise_snr": null
+ },
+ {
+  "id": "h08",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "अलविदा",
+  "intent": "hi_bye",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 0.74,
+  "noise_snr": null
+ },
+ {
+  "id": "h09",
+  "kind": "cache",
+  "lang": "hi",
+  "text": "आप क्या कर सकते हैं",
+  "intent": "hi_help",
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 1.46,
+  "noise_snr": null
+ },
+ {
+  "id": "h10",
+  "kind": "open",
+  "lang": "hi",
+  "text": "भारत की राजधानी क्या है",
+  "any": [
+   "दिल्ली",
+   "delhi"
+  ],
+  "voice": "hi_IN-pratham-medium",
+  "speed": 1.0,
+  "seconds": 1.87,
+  "noise_snr": null
+ },
+ {
+  "id": "u01",
+  "kind": "cache",
+  "text": "hello hello anybody home",
+  "intent": "can_you_hear",
+  "heldout": true,
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.76,
+  "noise_snr": null
+ },
+ {
+  "id": "u02",
+  "kind": "cache",
+  "text": "you are really good at this",
+  "intent": "compliment",
+  "heldout": true,
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.39,
+  "noise_snr": null
+ },
+ {
+  "id": "u03",
+  "kind": "cache",
+  "text": "I am off to bed now",
+  "intent": "good_night",
+  "heldout": true,
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.47,
+  "noise_snr": null
+ },
+ {
+  "id": "u04",
+  "kind": "cache",
+  "text": "what's your favourite thing to eat",
+  "intent": "favorite_food",
+  "heldout": true,
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.63,
+  "noise_snr": null
+ },
+ {
+  "id": "u05",
+  "kind": "cache",
+  "text": "tell me about yourself",
+  "intent": "whats_your_name",
+  "heldout": true,
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.34,
+  "noise_snr": null
+ },
+ {
+  "id": "u06",
+  "kind": "cache",
+  "text": "I have a stressful exam tomorrow",
+  "intent": "stress",
+  "heldout": true,
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.78,
+  "noise_snr": null
+ },
+ {
+  "id": "u07",
+  "kind": "cache",
+  "text": "can you work without wifi",
+  "intent": "offline",
+  "heldout": true,
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.61,
+  "noise_snr": null
+ },
+ {
+  "id": "u08",
+  "kind": "cache",
+  "text": "give me something to laugh about",
+  "intent": "tell_joke",
+  "heldout": true,
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.66,
+  "noise_snr": null
+ },
+ {
+  "id": "u09",
+  "kind": "cache",
+  "text": "I just got a new job",
+  "intent": "congrats",
+  "heldout": true,
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.82,
+  "noise_snr": null
+ },
+ {
+  "id": "u10",
+  "kind": "cache",
+  "text": "what is the weather going to be tomorrow",
+  "intent": "weather",
+  "heldout": true,
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.71,
+  "noise_snr": null
+ },
+ {
+  "id": "u11",
+  "kind": "skill",
+  "text": "what's nine times eight",
+  "expect": "72",
+  "heldout": true,
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.73,
+  "noise_snr": null
+ },
+ {
+  "id": "u12",
+  "kind": "skill",
+  "text": "set a timer for thirty seconds",
+  "expect": "timer",
+  "heldout": true,
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.66,
+  "noise_snr": null
+ },
+ {
+  "id": "u13",
+  "kind": "skill",
+  "text": "convert 2 liters to gallons",
+  "expect": "0\\.5",
+  "heldout": true,
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 1.76,
+  "noise_snr": null
+ },
+ {
+  "id": "u14",
+  "kind": "skill",
+  "text": "toss a coin for me",
+  "expect": "heads|tails",
+  "heldout": true,
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 1.2,
+  "noise_snr": null
+ },
+ {
+  "id": "u15",
+  "kind": "skill",
+  "text": "what is the time now",
+  "expect": "\\d{1,2}:\\d{2}",
+  "heldout": true,
+  "voice": "en_US-lessac-low",
+  "speed": 1.0,
+  "seconds": 1.28,
+  "noise_snr": null
+ },
+ {
+  "id": "u16",
+  "kind": "open",
+  "text": "what is the capital of Italy",
+  "any": [
+   "rome"
+  ],
+  "heldout": true,
+  "voice": "en_US-lessac-medium",
+  "speed": 0.85,
+  "seconds": 1.5,
+  "noise_snr": null
+ },
+ {
+  "id": "u17",
+  "kind": "open",
+  "text": "how many legs does a spider have",
+  "any": [
+   "eight",
+   "8"
+  ],
+  "heldout": true,
+  "voice": "en_GB-alba-medium",
+  "speed": 0.85,
+  "seconds": 1.78,
+  "noise_snr": null
+ },
+ {
+  "id": "u18",
+  "kind": "open",
+  "text": "who invented the light bulb",
+  "any": [
+   "edison"
+  ],
+  "heldout": true,
+  "voice": "en_US-lessac-low",
+  "speed": 0.85,
+  "seconds": 1.5,
+  "noise_snr": null
+ },
+ {
+  "id": "u19",
+  "kind": "open",
+  "text": "what is the freezing point of water in Fahrenheit",
+  "any": [
+   "32",
+   "thirty"
+  ],
+  "heldout": true,
+  "voice": "en_US-lessac-medium",
+  "speed": 1.0,
+  "seconds": 2.43,
+  "noise_snr": null
+ },
+ {
+  "id": "u20",
+  "kind": "open",
+  "text": "which gas do humans breathe in to survive",
+  "any": [
+   "oxygen"
+  ],
+  "heldout": true,
+  "voice": "en_GB-alba-medium",
+  "speed": 1.0,
+  "seconds": 2.35,
+  "noise_snr": null
+ }
+]

@@ -1,0 +1,41 @@
+# 40 questions with checkable answers: arithmetic word problems, logic, common sense, language, facts.
+- {id: h01, text: "if I have three apples and buy five more how many apples do I have", any: ["8", eight]}
+- {id: h02, text: "what is the next number in the sequence 2 4 6 8", any: ["10", ten]}
+- {id: h03, text: "how many minutes are there in three hours", any: ["180", "one hundred eighty", "one hundred and eighty"]}
+- {id: h04, text: "a train travels 60 kilometers in one hour. how far does it go in three hours", any: ["180", "one hundred eighty", "one hundred and eighty"]}
+- {id: h05, text: "which is heavier, a kilogram of feathers or a kilogram of iron", any: [same, equal, both, neither]}
+- {id: h06, text: "what is the opposite of hot", any: [cold]}
+- {id: h07, text: "how do you say good morning in Spanish", any: [buenos]}
+- {id: h08, text: "what is fifteen percent of two hundred", any: ["30", thirty]}
+- {id: h09, text: "is a tomato a fruit or a vegetable", any: [fruit]}
+- {id: h10, text: "what day comes after Friday", any: [saturday]}
+- {id: h11, text: "how many sides does a hexagon have", any: ["6", six]}
+- {id: h12, text: "what is the plural of mouse", any: [mice]}
+- {id: h13, text: "which number is bigger, 0.8 or 0.75", any: ["0.8", "point eight", "eight tenths"]}
+- {id: h14, text: "what is twelve squared", any: ["144", "one hundred forty"]}
+- {id: h15, text: "how many legs does a spider have", any: ["8", eight]}
+- {id: h16, text: "what is the freezing point of water in Celsius", any: ["0", zero]}
+- {id: h17, text: "who wrote the Harry Potter books", any: [rowling]}
+- {id: h18, text: "if today is Monday what day will it be in three days", any: [thursday]}
+- {id: h19, text: "how many months of the year have 31 days", any: ["7", seven]}
+- {id: h20, text: "what is the past tense of the verb go", any: [went]}
+- {id: h21, text: "what is the chemical symbol for sodium", any: [na]}
+- {id: h22, text: "which planet is known as the red planet", any: [mars]}
+- {id: h23, text: "what is the largest mammal", any: [whale]}
+- {id: h24, text: "how many seconds are in a minute", any: ["60", sixty]}
+- {id: h25, text: "what is the capital of Germany", any: [berlin]}
+- {id: h26, text: "how many meters are in 100 centimeters", any: ["1 meter", "one meter", "1 m", "one metre", "1 metre", "1."]}
+- {id: h27, text: "what is half of fifty", any: ["25", "twenty-five", "twenty five"]}
+- {id: h28, text: "is the earth flat", any: ["no", round, sphere, spherical, oblate]}
+- {id: h29, text: "what do cows drink", any: [water]}
+- {id: h30, text: "a farmer has 17 sheep and all but 9 run away. how many are left", any: ["9", nine]}
+- {id: h31, text: "what is the sum of the angles in a triangle", any: ["180", "one hundred eighty", "one hundred and eighty"]}
+- {id: h32, text: "what is the boiling point of water in Celsius", any: ["100", "one hundred"]}
+- {id: h33, text: "who wrote the Odyssey", any: [homer]}
+- {id: h34, text: "which ocean lies between Africa and Australia", any: [indian]}
+- {id: h35, text: "what is seven times eight", any: ["56", "fifty-six", "fifty six"]}
+- {id: h36, text: "how many continents are there", any: ["7", seven]}
+- {id: h37, text: "what is the main language spoken in Japan", any: [japanese]}
+- {id: h38, text: "if a shirt costs 20 dollars and is 25 percent off what is the new price", any: ["15", fifteen]}
+- {id: h39, text: "what is the square root of 81", any: ["9", nine]}
+- {id: h40, text: "which is the smallest prime number", any: ["2", two]}

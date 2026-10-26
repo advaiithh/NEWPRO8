@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+models/
+cache/
+*.log
+.pytest_cache/
+data/
+bench/testset/*.wav
+bench/out/

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PocketVoice Dashboard</title>
+<style>
+:root{
+  --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  --goodtext:#006300;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --grid:#2c2c2a; --axis:#383835;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --goodtext:#0ca30c;}}
+:root[data-theme="dark"]{
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --grid:#2c2c2a; --axis:#383835;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --goodtext:#0ca30c;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:14px/1.45 system-ui,Segoe UI,sans-serif}
+header{padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between}
+h1{font-size:18px;margin:0}
+.banner{color:var(--ink2);font-size:13px}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;padding:0 16px 24px}
+.card{background:var(--surface);border:1px solid var(--grid);border-radius:10px;padding:14px;min-width:0}
+.card h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:600}
+.wide{grid-column:1/-1}
+.big{font-size:28px;font-weight:650;font-variant-numeric:tabular-nums}
+.sub{color:var(--ink2);font-size:13px}
+.bar{height:10px;background:var(--grid);border-radius:5px;overflow:hidden;margin:6px 0 2px}
+.bar>i{display:block;height:100%;background:var(--s1);border-radius:0 4px 4px 0;transition:width .4s}
+.row{display:flex;justify-content:space-between;gap:8px;font-variant-numeric:tabular-nums}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;border:1px solid var(--axis);color:var(--ink)}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.ok{color:var(--goodtext);font-weight:650}
+button,input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--axis);border-radius:6px;padding:6px 10px}
+button{cursor:pointer} button:hover{border-color:var(--s1)}
+input{width:72px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:5px 8px;border-bottom:1px solid var(--grid)}th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:600;font-size:12px}
+.wf{display:flex;height:28px;gap:2px;margin:8px 0}
+.wf>div{min-width:3px;border-radius:3px;position:relative}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--ink2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}
+.log{max-height:150px;overflow:auto;font-size:12px;color:var(--ink2)}
+.tl{font-size:13px;color:var(--ink2);margin-top:6px;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header>
+  <h1>PocketVoice <span class="sub">offline · CPU-only</span></h1>
+  <div class="banner" id="banner">connecting…</div>
+</header>
+<main>
+  <section class="card" aria-labelledby="h-limit">
+    <h2 id="h-limit">Device limit</h2>
+    <div class="big"><span id="cores">–</span> cores · <span id="cap">–</span> MB</div>
+    <div class="sub" style="margin:8px 0">Tighten live (the governor reacts):</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+      <input id="ic" type="number" min="1" max="6" value="2" aria-label="cores"> cores
+      <input id="ir" type="number" min="400" step="128" value="1536" aria-label="RAM MB"> MB
+      <button onclick="tighten()">Tighten limit</button>
+      <button onclick="post('/api/tighten',{cores:4,ram_mb:4096})">Restore 4c/4GB</button>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="h-gauge">
+    <h2 id="h-gauge">Live gauges</h2>
+    <div class="row"><span>Total RSS vs cap</span><b id="rss">–</b></div>
+    <div class="bar"><i id="rssb" style="width:0"></i></div>
+    <div class="row" style="margin-top:8px"><span>CPU (100% = one core)</span><b id="cpu">–</b></div>
+    <div class="bar"><i id="cpub" style="width:0;background:var(--s3)"></i></div>
+    <div class="row" style="margin-top:8px"><span>LLM tokens/s</span><b id="tps">–</b></div>
+    <div class="row"><span>Package power (RAPL, whole machine)</span><b id="w">–</b></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-tier">
+    <h2 id="h-tier">Quality tier</h2>
+    <div class="big" id="tier">–</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin:8px 0">
+      <button onclick="post('/api/tier',{tier:'auto'})">Auto</button>
+      <button onclick="post('/api/tier',{tier:0})">T0</button><button onclick="post('/api/tier',{tier:2})">T2</button>
+      <button onclick="post('/api/tier',{tier:4})">T4</button>
+    </div>
+    <div class="log" id="log">no transitions yet</div>
+  </section>
+
+  <section class="card wide" aria-labelledby="h-turn">
+    <h2 id="h-turn">Last turn · latency waterfall (end of speech → first audio)</h2>
+    <div class="row"><span><span id="route" class="badge">–</span> <span class="sub" id="sim"></span></span>
+      <span>last <b id="lat">–</b> · p50 <b id="p50">–</b> · p95 <b id="p95">–</b></span></div>
+    <div class="wf" id="wf"></div>
+    <div class="legend" id="wfl"></div>
+    <div class="tl" id="tl"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-proof">
+    <h2 id="h-proof">Proof panel</h2>
+    <table>
+      <tr><td>GPU</td><td id="pgpu">–</td></tr>
+      <tr><td>ONNX providers</td><td id="pprov">–</td></tr>
+      <tr><td>Ollama VRAM</td><td id="pvram">–</td></tr>
+      <tr><td>External network attempts</td><td id="pnet">–</td></tr>
+      <tr><td>Models</td><td>loaded from local paths</td></tr>
+    </table>
+  </section>
+
+  <section class="card" aria-labelledby="h-rep">
+    <h2 id="h-rep">Baseline vs ours (from reports/)</h2>
+    <div id="rep" class="sub">Run scripts\bench.ps1 to populate.</div>
+  </section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const COL = ['var(--s1)','var(--s2)','var(--s3)','var(--s4)'];
+const NAMES = {'speech_end->asr_final':'ASR finalise','asr_final->route_decision':'Route','route_decision->llm_first_token':'LLM first token',
+  'llm_first_token->tts_first_chunk_ready':'TTS first chunk','route_decision->tts_first_chunk_ready':'TTS (skill/cache)',
+  'tts_first_chunk_ready->first_audio':'Playback start','asr_final->llm_first_token':'LLM first token','llm_first_token->first_audio':'TTS to audio'};
+function fmt(x,d=0){return x==null?'–':Number(x).toFixed(d)}
+function post(u,b){fetch(u,{method:'POST',body:JSON.stringify(b)})}
+function tighten(){post('/api/tighten',{cores:+$('ic').value,ram_mb:+$('ir').value})}
+function render(s){
+  $('banner').textContent = s.limit.banner;
+  $('cores').textContent = s.limit.cores; $('cap').textContent = s.limit.ram_mb;
+  const rp = s.rss_mb / s.limit.ram_mb * 100;
+  $('rss').textContent = fmt(s.rss_mb)+' / '+s.limit.ram_mb+' MB'; $('rssb').style.width = Math.min(rp,100)+'%';
+  $('rssb').style.background = rp>92?'var(--crit)':rp>75?'var(--warn)':'var(--s1)';
+  const cp = s.cpu_pct/(s.limit.cores*100)*100;
+  $('cpu').textContent = fmt(s.cpu_pct)+'%'; $('cpub').style.width = Math.min(cp,100)+'%';
+  $('tps').textContent = fmt(s.tok_s,1); $('w').textContent = s.watts==null?'n/a':fmt(s.watts,1)+' W';
+  $('tier').textContent = 'T'+s.tier.id+' · '+s.tier.name+(s.tier.forced?' (forced)':'');
+  $('log').textContent = s.transitions.length ? '' : 'no transitions yet';
+  s.transitions.slice().reverse().forEach(t=>{const d=document.createElement('div');
+    d.textContent = new Date(t.t*1000).toLocaleTimeString()+'  T'+t.from+' → T'+t.to+'  ('+t.reason+')'; $('log').appendChild(d)});
+  const l = s.last||{};
+  $('lat').textContent = l.latency_ms==null?'–':fmt(l.latency_ms)+' ms';
+  $('p50').textContent = s.p50==null?'–':fmt(s.p50)+' ms'; $('p95').textContent = s.p95==null?'–':fmt(s.p95)+' ms';
+  $('route').textContent = l.path ? l.path.toUpperCase()+(l.intent?' · '+l.intent:'') : '–';
+  $('sim').textContent = l.sim!=null ? 'similarity '+fmt(l.sim,2) : '';
+  $('tl').textContent = l.transcript ? 'You: “'+l.transcript+'” → “'+(l.reply||'')+'”' : '';
+  const st = l.stages_ms||{}, ks = Object.keys(st).filter(k=>st[k]>0.5), tot = ks.reduce((a,k)=>a+st[k],0)||1;
+  $('wf').innerHTML = ''; $('wfl').innerHTML = '';
+  ks.forEach((k,i)=>{const d=document.createElement('div');d.style.flex=st[k]/tot;d.style.background=COL[i%4];
+    d.title=(NAMES[k]||k)+': '+fmt(st[k])+' ms';$('wf').appendChild(d);
+    const e=document.createElement('span');e.innerHTML='<i style="background:'+COL[i%4]+'"></i>'+(NAMES[k]||k)+' '+fmt(st[k])+' ms';$('wfl').appendChild(e)});
+  const p = s.proof||{};
+  $('pgpu').innerHTML = p.pass ? '<span class="ok">none · CPU only ✓</span>' : '<b style="color:var(--crit)">CHECK ✗</b>';
+  $('pprov').textContent = Object.values(p.ort_sessions||{}).map(v=>v.join()).filter((v,i,a)=>a.indexOf(v)===i).join(' ')||'–';
+  $('pvram').textContent = p.ollama ? p.ollama.map(m=>m.model+': '+m.size_vram+' B').join(', ') : '–';
+  $('pnet').innerHTML = '<span class="'+(s.net.attempts===0?'ok':'')+'">'+s.net.attempts+(s.net.attempts===0?' ✓':' ✗ '+s.net.last)+'</span>';
+  if(s.report && !$('rep').dataset.done){ $('rep').dataset.done=1;
+    const rows = s.report.rows||[]; let h='<table><tr><th>System</th><th>p50 ms</th><th>p95 ms</th><th>RSS MB</th><th>CPU-s/turn</th></tr>';
+    rows.forEach(r=>h+='<tr><td>'+r.system+'</td><td>'+fmt(r.p50)+'</td><td>'+fmt(r.p95)+'</td><td>'+fmt(r.rss)+'</td><td>'+fmt(r.cpu_s,1)+'</td></tr>');
+    $('rep').innerHTML = h+'</table>'; }
+}
+const es = new EventSource('/events');
+es.onmessage = e => render(JSON.parse(e.data));
+es.onerror = () => $('banner').textContent = 'dashboard disconnected… retrying';
+</script>
+</body>
+</html>

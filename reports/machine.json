@@ -1,0 +1,18 @@
+{
+  "windows": "Windows-11-10.0.26300-SP0",
+  "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "cpu_name": "{\"Name\":\"AMD Ryzen 5 5600H with Radeon Graphics         \"}",
+  "physical_cores": 6,
+  "logical_cores": 12,
+  "ram_total_mb": 15710,
+  "ram_free_mb": 4469,
+  "battery": true,
+  "gpus_informational_only": "[{\"Name\":\"AMD Radeon(TM) Graphics\"},{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\"},{\"Name\":\"VirtualMonitorDriver Device\"}]",
+  "python_launcher": "-V:3.14 *        Python 3.14 (64-bit)\n -V:3.13t         Python 3.13 (64-bit, freethreaded)\n -V:3.13          Python 3.13 (64-bit)\n -V:3.12          Python 3.12 (64-bit)",
+  "ollama": "ollama version is 0.35.1",
+  "declared_limit": {
+    "cores": 4,
+    "ram_mb": 4096,
+    "reason": "default 4c/4096MB is satisfiable on this machine"
+  }
+}

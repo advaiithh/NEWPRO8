@@ -1,0 +1,2 @@
+limit: {cores: 6, ram_mb: 6144}
+ollama: {full_model: 'qwen2.5:3b-instruct'}   # bigger model for better answers when the device allows

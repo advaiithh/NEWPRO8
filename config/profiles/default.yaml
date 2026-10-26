@@ -1,0 +1,2 @@
+# The strict 4-core / 4 GB edge device used for all benchmarks (qwen2.5:1.5b).
+limit: {cores: 4, ram_mb: 4096}

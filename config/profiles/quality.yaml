@@ -1,0 +1,10 @@
+# Best answers: needs about 8 GB. Newer, larger Qwen3.5 model on top; falls back tier by tier when memory is short.
+limit: {cores: 6, ram_mb: 8192}
+ollama:
+  full_model: qwen3.5:4b
+  tier_models: [qwen3.5:4b, qwen2.5:3b-instruct, qwen2.5:1.5b-instruct, qwen2.5:0.5b-instruct]
+governor:
+  target_ms: 7000                                   # latency this model is expected to need
+  footprint_mb: [6700, 3700, 2800, 2200, 700]        # measured model RSS + ~1.7 GB for the rest of the stack
+asr: {final: small.en}      # accuracy of the final transcript vs ~1 s extra per turn
+kb: {dir: kb_en}               # English Wikipedia, October 2026 export (scripts/build_kb_full.py); falls back to models/kb
